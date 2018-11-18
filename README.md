@@ -3,6 +3,8 @@
 
 * [Getting Started](./docs/getting_started.md)
 
+This is a fork roduced for Amann ENgineering with custom pages (with logo) and a reduced version of the examples files directory
+
 ## About
 
 Potree is a free open-source WebGL based point cloud renderer for large point clouds.
