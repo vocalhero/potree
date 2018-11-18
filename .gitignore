@@ -22,4 +22,5 @@ libs/CesiumUnminified
 pointclouds/C
 /amannData
 potree.iml
+npm-debug.log
 .idea
