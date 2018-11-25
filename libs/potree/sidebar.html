@@ -1,0 +1,345 @@
+
+<!-- saved from url=(0071)http://sampledata.phoenixlidar.com/viewer/code/libs/potree/sidebar.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><div class="dropdown">
+
+	<button id="toolbar_btn" onclick="myFunction(&#39;toolbar.0&#39;)" class="dropbtn tooltip-dd"><i class="fa fa-bars" aria-hidden="true"></i>
+		<span class="tooltiptext-dd">open toolbar</span>
+	</button>
+
+	<div id="toolbar.0" class="dropdown-content-0 dropdown-content" style="overflow:visible;">
+    	
+    	<!-- Appearance -->
+
+    	<a>
+    		<button id="appearance_btn" onclick="myFunction(&#39;appearance.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-eye" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Appearance</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="appearance.1" class="dropdown-content"> 
+
+    		<div>
+    		<div class="divider">
+				<span>Appearance</span>
+			</div>
+			<ul class="pv-menu-list">
+			<li><span class="important-dd" data-i18n="appearance.nb_max_pts"></span>:<span id="lblPointBudget"></span> <div id="sldPointBudget"></div>	</li>
+			<li><span class="important-dd" data-i18n="appearance.point_size"></span>:<span id="lblPointSize"></span> <div id="sldPointSize"></div>		</li>
+			<li><span class="important-dd" data-i18n="appearance.field_view"></span>:<span id="lblFOV"></span><div id="sldFOV"></div>					</li>
+			<li style="display: none"><span class="important-dd" data-i18n="appearance.point_opacity"></span>:<span id="lblOpacity"></span><div id="sldOpacity"></div>				</li>
+		   
+		   <li>
+			   <label for="optPointSizing" class="pv-select-label" data-i18n="appearance.point_size_type">Point Sizing </label>
+			   <select id="optPointSizing" name="optPointSizing">
+					<option>Fixed</option>
+					<option>Attenuated</option>
+					<option>Adaptive</option>
+				</select>
+			</li>
+			
+			<li style="display: none">
+			   <label for="optQuality" class="pv-select-label" data-i18n="appearance.point_quality"></label>
+			   <select id="optQuality" name="optQuality">
+					<option>Squares</option>
+					<option>Circles</option>
+					<option>Interpolation</option>
+					<!--<option value="Splats">HQ-Splats</option>-->
+				</select>
+			</li>		
+		   
+			<div>
+				<div class="divider">
+					<span>Eye-Dome-Lighting</span>
+				</div>
+				
+				<li><label>
+					<div class="checkbox-dd">
+						<input type="checkbox" id="chkEDLEnabled" onclick="viewer.setEDLEnabled(	this.checked)">
+						<label></label>
+					</div>
+				</label></li>
+				<li style="display: none"><span class="important-dd" data-i18n="appearance.edl_radius"></span>:<span id="lblEDLRadius"></span><div id="sldEDLRadius"></div></li>
+				<li style="display: none"><span class="important-dd" data-i18n="appearance.edl_strength"></span>:<span id="lblEDLStrength"></span><div id="sldEDLStrength"></div></li>
+			</div>
+			
+			<div>
+				<div class="divider">
+					<span>Background</span>
+				</div>
+				
+				<li><label><input type="radio" name="background" value="skybox" onclick="viewer.setBackground(&quot;skybox&quot;)"><span>Skybox</span></label></li>
+				<li><label><input type="radio" name="background" value="gradient" onclick="viewer.setBackground(&quot;gradient&quot;)"><span>Gradient</span></label></li>
+				<li><label><input type="radio" name="background" value="black" onclick="viewer.setBackground(&quot;black&quot;)"><span>Black</span></label></li>
+				<li><label><input type="radio" name="background" value="white" onclick="viewer.setBackground(&quot;white&quot;)"><span>White</span></label></li>
+			</div>
+				
+			</ul>
+			
+		</div>
+    	</div>
+
+        <!-- NAVIGATION -->
+		<a>
+    		<button id="navigation_btn" onclick="myFunction(&#39;navigation.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-arrows" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Navigation</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="navigation.1" class="dropdown-content">
+    	    <div class="divider">
+				<span>Navigation</span>
+			</div>
+					<li id="navigation"></li>
+					<li><span class="important-dd" data-i18n="appearance.move_speed"></span>: <span id="lblMoveSpeed"></span><div id="sldMoveSpeed"></div></li>
+    	</div>
+
+    	<!-- TOOLS -->
+		<a>
+    		<button id="tools_btn" onclick="myFunction(&#39;tools.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-wrench" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Tools</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="tools.1" class="dropdown-content"> 
+ 			<div>
+ 			<div class="divider">
+				<span>Tool</span>
+			</div>
+			<ul class="pv-menu-list">
+				<div>
+					<li id="tools"></li>
+					
+
+					
+				</div>
+			</ul>
+			</div>
+    	</div>
+
+    	<!-- Measurements -->
+		<a>
+    		<button id="measurements_btn" onclick="myFunction(&#39;measurements.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Measurements</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="measurements.1" class="dropdown-content"> 
+	  		<ul class="pv-menu-list">
+
+				<li>
+				   <label for="optClipMode" class="important-dd pv-select-label"><span data-i18n="appearance.clip_mode"></span></label>
+				   <select id="optClipMode" name="optClipMode">
+						<option>No Clipping</option>
+						<option>Highlight Inside</option>
+						<option>Clip Outside</option>
+					</select>
+				</li>
+			</ul>
+
+	  		<div>
+	  		 	<div class="divider">
+					<span>Measurements</span>
+				</div>
+				<ul class="pv-menu-list selectable" id="measurement_details"></ul>
+			</div>
+    	</div>
+
+
+    	<!-- ANNOTATIONS -->
+		<a>
+    		<button id="measurements_btn" onclick="myFunction(&#39;annotations.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-pencil-square" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Annotations</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="annotations.1" class="dropdown-content"> 
+	  		<div>
+	  			<div class="divider">
+					<span>Annotations</span>
+				</div>
+				<ul class="pv-menu-list selectable" id="annotation_details"></ul>
+			</div>
+    	</div>
+
+
+    	<!-- MATERIALS -->
+		<a>
+    		<button id="material_btn" onclick="myFunction(&#39;material.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-paint-brush" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Material</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="material.1" class="dropdown-content"> 
+	  	<div>
+	  		<div class="divider">
+				<span>Material</span>
+			</div>
+			<ul class="pv-menu-list">
+			<li>
+			   <label for="optMaterial" class="pv-select-label">Attributes:</label><br>
+			   <select id="optMaterial" name="optMaterial">
+			   </select>
+			</li>
+			
+			<div id="materials.composite_weight_container">
+				<div class="divider">
+					<span>Attribute Weights</span>
+				</div>
+			
+				<li>RGB: <span id="lblWeightRGB"></span> <div id="sldWeightRGB"></div>	</li>
+				<li>Intensity: <span id="lblWeightIntensity"></span> <div id="sldWeightIntensity"></div>	</li>
+				<li>Elevation: <span id="lblWeightElevation"></span> <div id="sldWeightElevation"></div>	</li>
+				<li>Classification: <span id="lblWeightClassification"></span> <div id="sldWeightClassification"></div>	</li>
+				<li>Return Number: <span id="lblWeightReturnNumber"></span> <div id="sldWeightReturnNumber"></div>	</li>
+				<li>Flightline: <span id="lblWeightSourceID"></span> <div id="sldWeightSourceID"></div>	</li>
+			</div>
+			
+			<div id="materials.rgb_container">
+				<div class="divider">
+					<span>RGB</span>
+				</div>
+			
+				<li>Gamma: <span id="lblRGBGamma"></span> <div id="sldRGBGamma"></div>	</li>
+				<li>Brightness: <span id="lblRGBBrightness"></span> <div id="sldRGBBrightness"></div>	</li>
+				<li>Contrast: <span id="lblRGBContrast"></span> <div id="sldRGBContrast"></div>	</li>
+			</div>
+			
+			
+			<div id="materials.elevation_container">
+				<div class="divider">
+					<span>Elevation</span>
+				</div>
+			
+				<li><span data-i18n="appearance.elevation_range"></span>: <span id="lblHeightRange"></span> <div id="sldHeightRange"></div>	</li>
+			</div>
+			
+			<div id="materials.transition_container">
+				<div class="divider">
+					<span>Transition</span>
+				</div>
+			
+				<li>transition: <span id="lblTransition"></span> <div id="sldTransition"></div>	</li>
+			</div>
+			
+			<div id="materials.intensity_container">
+				<div class="divider">
+					<span>Intensity</span>
+				</div>
+			
+				<li>Range: <span id="lblIntensityRange"></span> <div id="sldIntensityRange"></div>	</li>
+				<li>Gamma: <span id="lblIntensityGamma"></span> <div id="sldIntensityGamma"></div>	</li>
+				<li>Brightness: <span id="lblIntensityBrightness"></span> <div id="sldIntensityBrightness"></div>	</li>
+				<li>Contrast: <span id="lblIntensityContrast"></span> <div id="sldIntensityContrast"></div>	</li>
+			</div>
+				
+			
+			</ul>
+		</div>
+    	</div>
+
+    	<!-- Scene -->
+		<a>
+    		<button onclick="myFunction(&#39;scene.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-picture-o" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Scene</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="scene.1" class="dropdown-content"> 
+		<div>
+			<div class="divider">
+				<span>Scene</span>
+			</div>
+			<ul class="pv-menu-list selectable">
+				<div>
+					<li><span class="important-dd" data-i18n="scene.camera_position"></span>:<span id="lblCameraPosition"></span></li>
+					<li><span class="important-dd" data-i18n="scene.camera_target"></span>:<span id="lblCameraTarget"></span></li>
+					
+				
+					<div class="divider" style="padding: 10px 0px 15px 0px">
+						<span>Point Clouds</span>
+					</div>
+				
+				</div>
+				<li id="sceneList" class="checkboxlist"></li>
+			</ul>
+		</div>
+    	</div>
+
+    	<!-- Classification Filter -->
+		<a>
+    		<button id="classification_filter_btn" onclick="myFunction(&#39;classification_filter.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-magic" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Classification Filter</span>
+    		</button>
+    	</a>
+    	<div style="width: 200px;left:58px;top:0px;overflow: visible;" id="classification_filter.1" class="dropdown-content"> 
+    		<div class="divider">
+				<span>Classification Filter</span>
+			</div>
+			<div class="classificationFilterCheckboxes">
+				<ul id="classificationList" class="checkboxlist pv-menu-list"></ul>
+			</div>
+    	</div>
+
+    	<!-- Settings -->
+		<a style="display: none;">
+    		<button id="settings_btn" onclick="myFunction(&#39;settings.1&#39;)" class="tooltip-dd dropbtn">
+    			<i class="fa fa-sliders" aria-hidden="true"></i>
+  				<span class="tooltiptext-dd">Settings</span>
+    		</button>
+    	</a>
+    	<div style="left:58px;top:0px;overflow: visible;" id="settings.1" class="dropdown-content"> 
+	  		<div>
+	  		<div class="divider">
+				<span>Settings</span>
+			</div>
+			<ul class="pv-menu-list">
+				<li>
+					<span class="important-dd" data-i18n="appearance.min_node_size">
+					</span>
+					<span id="lblMinNodeSize">
+					</span>
+					<div id="sldMinNodeSize"></div>
+					</li>
+				<li>
+				   <label for="optClipMode" class="important-dd pv-select-label"><span data-i18n="appearance.clip_mode"></span></label>
+				   <select id="optClipMode" name="optClipMode">
+						<option>No Clipping</option>
+						<option>Highlight Inside</option>
+						<option>Clip Outside</option>
+					</select>
+				</li>
+
+
+
+
+				<li><label>
+					<span data-i18n="appearance.box"></span>
+					<div class="checkbox-dd">
+						<input type="checkbox" onclick="viewer.setShowBoundingBox(this.checked)">
+						<label></label>
+					</div>
+				</label></li>
+				<li><label>
+					<span data-i18n="appearance.freeze"></span>
+					<div class="checkbox-dd">
+						<input type="checkbox" onclick="viewer.setFreeze(this.checked)">
+						<label></label>
+					</div>
+				</label></li>
+			</ul>
+		  </div>
+				<div class="divider">
+					<span>Language</span>
+				</div>
+    			<div class="language" style="font-family:arial;">
+					<a href="javascript:viewer.setLanguage(&#39;en&#39;);">EN</a>
+					<a href="javascript:viewer.setLanguage(&#39;fr&#39;);">FR</a>
+					<a href="javascript:viewer.setLanguage(&#39;de&#39;);">DE</a>
+				</div>
+
+    	</div>
+
+
+  	</div>
+</div></body></html>
