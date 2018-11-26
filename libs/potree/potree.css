@@ -304,15 +304,15 @@ body{
 }
 
 .pv-menu-list > li > label{
-	width: 100%;
+	width: 90%;
 }
 
 .pv-menu-list select{
-	width: 100%;
+	width: 90%;
 }
 
 .pv-menu-list > li > span{
-	width: 100% !important;
+	width: 90% !important;
 }
 
 .pv-menu-list .ui-selectmenu-button span.ui-selectmenu-text{
